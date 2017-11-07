@@ -35,12 +35,13 @@ RUN cd /gnuradio && \
     ldconfig
 
 # Installation of gr-ieee802-11
-#RUN cd /gnuradio && \
-#    git https://github.com/h3dema/gr-ieee802-11.git && \
-#    cd gr-ieee802-11 && \
-#    mkdir build && \
-#    cd build && \
-#    cmake .. && \
+RUN cd /gnuradio && \
+    git https://github.com/h3dema/gr-ieee802-11.git && \
+    cd gr-ieee802-11 && \
+    mkdir build && \
+    cd build && \
+    cmake ..
+#    && \
 #    make && \
 #    make install && \
 #    ldconfig
