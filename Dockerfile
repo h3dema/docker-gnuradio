@@ -26,13 +26,13 @@ RUN apt-get -y install swig liblog4cpp5-dev
 RUN cd /gnuradio && \
     git clone https://github.com/bastibl/gr-foo.git && \
     cd gr-foo && \
+    git checkout 2ba97c8d6d1e6bb322446773e42cbdac347c0085 && \
     mkdir build && \
     cd build && \
-    cmake ..
-#    && \
-#    make && \
-#    make install && \
-#    ldconfig
+    cmake .. && \
+    make && \
+    make install && \
+    ldconfig
 
 # Installation of gr-ieee802-11
 #RUN cd /gnuradio && \
