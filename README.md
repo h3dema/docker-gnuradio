@@ -21,7 +21,7 @@ $ docker build -t marcelmaatkamp/gnuradio github.com/h3dema/docker-gnuradio
 
 To run with a local USRP
 ```
-$ docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb marcelmaatkamp/gnuradio /bin/bash
+$ docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb marcelmaatkamp/gnuradio
 ```
 
 ## Examples
