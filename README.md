@@ -9,25 +9,22 @@ This is a Dockerfile for building GNURadio 3.7.1 and its modules:
 - gr-baz
 - gr-extras
 
-----------
-**BUILD**
+## BUILD
 
 To build an image with this file simply use:
 
-    $ git clone https://github.com/marcelmaatkamp/docker-gnuradio.git
-    $ cd docker-gnuradio 
-    $ docker build -t marcelmaatkamp/gnuradio .
+```
+$ docker build -t marcelmaatkamp/gnuradio github.com/h3dema/docker-gnuradio
+```
 
-----------
+## RUN
 
-**DEPLOY**
+To run with a local USRP
+```
+$ docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb marcelmaatkamp/gnuradio /bin/bash
+```
 
-A pre-build image of this dockerfile can be found at https://registry.hub.docker.com/u/marcelmaatkamp/gnuradio
-   
-    $ docker pull marcelmaatkamp/gnuradio
-    $ docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb marcelmaatkamp/gnuradio /bin/bash
-
-**Examples**
+## Examples
 
 Run rtl_tcp over your network:
 ```
